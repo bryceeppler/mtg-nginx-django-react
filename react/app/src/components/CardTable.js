@@ -37,13 +37,14 @@ function CustomToolbar() {
 const columns = [
   {
     field: "image",
-    headerName: "",
+    headerName: "Image",
     width: 80,
     renderCell: (params) => {
       return <img src={params.row.image} height={90} />;
     },
     flex: 1,
     align: "center",
+    headerAlign: "center",
 
   },
   { field: "name", headerName: "Name", width: 200, align: "center", headerAlign: 'center' },
@@ -62,12 +63,13 @@ const columns = [
   },
 
   {
-    field: "link",
-    headerName: "",
+    field: "buynow  ",
+    headerName: "Buy Now",
     renderCell: (params) => {
       return renderBuyNowBtn(params.row);
     },
     align: "center",
+    headerAlign: 'center',
   },
 ];
 
