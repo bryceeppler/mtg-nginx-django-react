@@ -14,7 +14,7 @@ import {
 import HelpCenterTwoToneIcon from "@mui/icons-material/HelpCenterTwoTone";
 import { Box } from "@mui/system";
 
-axios.defaults.baseURL = "https://mtg-flask-api-dev.us-east-1.elasticbeanstalk.com";
+axios.defaults.baseURL = "http://127.0.0.1/api";
 
 
 // modal styling temporarily
