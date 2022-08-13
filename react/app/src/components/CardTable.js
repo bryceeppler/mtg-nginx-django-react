@@ -1,5 +1,5 @@
 import React from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar, GridToolbarContainer, GridToolbarColumnsButton } from "@mui/x-data-grid";
 import { Button, Container } from "@mui/material";
 import { useState } from "react";
 
@@ -26,6 +26,14 @@ const handleClick = (params) => {
   window.open(params.link, "noopener,noreferrer");
 };
 
+function CustomToolbar() {
+  return (
+    <GridToolbarContainer>
+      <GridToolbarColumnsButton />
+    </GridToolbarContainer>
+  );
+}
+
 const columns = [
   {
     field: "image",
@@ -38,10 +46,10 @@ const columns = [
     align: "center",
 
   },
-  { field: "name", headerName: "Name", width: 200, flex: 1, align: "center", headerAlign: 'center' },
-  { field: "set", headerName: "Set", width: 180, flex: 1, align: "center", headerAlign: 'center' },
-  { field: "price", headerName: "Price (CAD)", width: 70, flex: 1, align: "center", headerAlign: 'center', },
-  { field: "condition", headerName: "Condition", flex: 1, align: "center", headerAlign: 'center' },
+  { field: "name", headerName: "Name", width: 200, align: "center", headerAlign: 'center' },
+  { field: "set", headerName: "Set", width: 180, align: "center", headerAlign: 'center' },
+  { field: "price", headerName: "Price (CAD)", width: 70, align: "center", headerAlign: 'center', },
+  { field: "condition", headerName: "Condition", align: "center", headerAlign: 'center' },
   {
     field: "websiteLogo",
     headerName: "Vendor",
@@ -49,7 +57,6 @@ const columns = [
     renderCell: (params) => {
       return <img src={params.row.websiteLogo} width={80} />;
     },
-    flex: 1,
     align: "center",
     headerAlign: 'center',
   },
@@ -60,7 +67,6 @@ const columns = [
     renderCell: (params) => {
       return renderBuyNowBtn(params.row);
     },
-    flex: 1,
     align: "center",
   },
 ];
@@ -110,6 +116,7 @@ export default function CardTable({ data }) {
     <div>
         
         <DataGrid
+        components={{ Toolbar: CustomToolbar }}
           columns={columns}
           rows={rows}
           pageSize={pageSize}
