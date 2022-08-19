@@ -83,5 +83,4 @@ Websites supported:
 # Frontend
 The front end uses React and Material UI.
 
-![image](https://user-images.githubusercontent.com/65413229/185690059-49449faa-18cb-4257-824d-be352985880d.png)
-
+![image](https://user-images.githubusercontent.com/65413229/185690784-3e3a7cfa-fd5d-401c-951e-be662a2d30a4.png)
