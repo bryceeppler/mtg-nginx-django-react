@@ -1,12 +1,27 @@
-import requests
 from bs4 import BeautifulSoup
+import requests
 import string
 
-
-class HouseOfCardsSpider():
-    def __init__(self, cardName, url):
-        self.url = url
+class HouseOfCardsScraper():
+    def __init__(self, cardName):
         self.cardName = cardName
+        self.results = {}
+        self.baseUrl = 'https://houseofcards.ca'
+        self.searchUrl = self.baseUrl + '/search?page=1&q=%2A'
+        self.url = self.createUrl()
+
+    def getResults(self):
+        return self.results
+
+    def createUrl(self):
+        url = self.searchUrl
+        nameArr = self.cardName.split()
+        for word in nameArr:
+            url += word
+            if word != nameArr[len(nameArr)-1]: # then we don't have last item, add %20
+                url+= '%20' 
+            else: url+= '%2A'
+        return url
 
     def compareCardNames(self, cardName, cardName2):
         """
@@ -19,20 +34,18 @@ class HouseOfCardsSpider():
             return True
         else:
             return False
-        
-    
-    def getStock(self):
-        """
-        returns a stock list for the card
-        """
+
+    def scrape(self):
+        print('Scraping ' + self.url)
         page = requests.get(self.url)
+
+        print("Retreiving card list")
         sp = BeautifulSoup(page.text, 'html.parser')
         cards = sp.select('div.productCard__card')
 
-        inStockList = []
+        stockList = []
 
         for card in cards:
-
             # Product tiles are split into upper and lower divs
             productCardLower = card.select_one('div.productCard__lower')
             productCardUpper = card.select_one('div.productCard__upper')
@@ -46,17 +59,18 @@ class HouseOfCardsSpider():
             if not self.compareCardNames(self.cardName, checkName):
                 continue
 
-
-            stockList = []
-            conditions = productCardLower.select('li.productChip')
-            for c in conditions:
+            # For this card variant, get the stock
+            variantStockList = []
+            variantConditions = productCardLower.select('li.productChip')
+            for c in variantConditions:
                 if c['data-variantavailable'] == 'true':
                     condition = c.getText().strip()
                     price = float(c['data-variantprice']) / 100
-                    stockList.append((condition, price))
+                    variantStockList.append((condition, price))
+
 
             # if stockList is empty, continue
-            if not stockList:
+            if not variantStockList:
                 continue
 
             # <a> tag has href pointing to card's page and inner text is the card's name
@@ -73,12 +87,14 @@ class HouseOfCardsSpider():
             setName = productCardLower.select_one('p.productCard__setName').getText()
 
 
-            inStockList.append({
+            results = {
                 'name': name,
                 'link': link,
                 'image': imageUrl,
                 'set': setName,
-                'stock': stockList
-            })
+                'stock': variantStockList
+            }
 
-        return inStockList
+            stockList.append(results)
+        self.results = stockList
+
