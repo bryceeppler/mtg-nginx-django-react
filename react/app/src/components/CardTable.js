@@ -49,7 +49,7 @@ const columns = [
   },
   { field: "name", headerName: "Name", width: 200, align: "center", headerAlign: 'center' },
   { field: "set", headerName: "Set", width: 180, align: "center", headerAlign: 'center' },
-  { field: "price", headerName: "Price (CAD)", width: 70, align: "center", headerAlign: 'center', },
+  { field: "price", headerName: "Price", width: 70, align: "center", headerAlign: 'center', },
   { field: "condition", headerName: "Condition", align: "center", headerAlign: 'center' },
   {
     field: "websiteLogo",
@@ -89,11 +89,11 @@ export default function CardTable({ data }) {
   const rows = [];
   for (const website in data) {
     var websiteLogo;
-    if (website === "Gauntlet Games") {
+    if (website === "gauntlet") {
       websiteLogo = gauntletImage;
-    } else if (website === "House of Cards") {
+    } else if (website === "houseOfCards") {
       websiteLogo = hocImage;
-    } else if (website === "Wizards Tower") {
+    } else if (website === "kanatacg") {
       websiteLogo = wtImage;
     }
 

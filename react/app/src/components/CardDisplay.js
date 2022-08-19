@@ -106,8 +106,8 @@ export default function CardDisplay() {
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Bugbear was created to help Canadian MTG enthusiasts find the cheapest card
-            prices from Canadian vendors. Currently, we support HouseofCards, Gauntlet Games,
-            and WizardTower. If you would like to see another site indexed on bugbear, or encounter
+            prices from Canadian vendors. All prices are in CAD. Currently, we support HouseofCards, Gauntlet Games,
+            and WizardsTower. If you would like to see another site indexed on bugbear, or encounter
             any bugs, email me at epplerdev@gmail.com.
           </Typography>
 
