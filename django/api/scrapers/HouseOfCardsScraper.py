@@ -36,7 +36,7 @@ class HouseOfCardsScraper():
             return False
 
     def scrape(self):
-        print('Scraping ' + self.url)
+        print('Scraping ' + self.baseUrl)
         page = requests.get(self.url)
 
         print("Retreiving card list")
