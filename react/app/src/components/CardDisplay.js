@@ -11,7 +11,7 @@ import {
 import HelpCenterTwoToneIcon from "@mui/icons-material/HelpCenterTwoTone";
 import { Box } from "@mui/system";
 
-axios.defaults.baseURL = "http://localhost:8000/api";
+axios.defaults.baseURL = "http://54.225.140.11/api/";
 
 
 // modal styling temporarily
