@@ -13,7 +13,9 @@ const theme = createTheme({
                         // main: '#8C67AB',
                         // main: '#3401A9',
                         // main: '#00B0F0',
-                        main: '#ECA35B',
+                        // main: '#ECA35B',
+                        // main: '#0C90F2',
+                        main: '#1A6ED6',
 
 
                 },

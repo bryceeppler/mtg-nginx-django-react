@@ -65,7 +65,7 @@ export default function CardDisplay() {
               color="primary"
               sx={{ fontWeight: "bold", marginBottom: 2 }}
             >
-              bugbear
+              snapcaster
             </Typography>
             <HelpCenterTwoToneIcon
               color="primary"
@@ -99,12 +99,12 @@ export default function CardDisplay() {
           >
             <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
-            What is bugbear?
+            What is snapcaster?
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Bugbear was created to help Canadian MTG enthusiasts find the cheapest card
+            snapcaster was created to help Canadian MTG enthusiasts find the cheapest card
             prices from Canadian vendors. All prices are in CAD. Currently, we support Fusion Gaming, HouseofCards, Gauntlet Games,
-            and WizardsTower. If you would like to see another site indexed on bugbear, or encounter
+            and WizardsTower. If you would like to see another site indexed on snapcaster, or encounter
             any bugs, email me at epplerdev@gmail.com.
           </Typography>
 
