@@ -10,6 +10,8 @@ const hocImage =
 const wtImage =
   "https://i.ibb.co/hm3qKWc/wizardstower-removebg-preview.png";
 
+const fusionImage = "https://cc-client-assets.s3.amazonaws.com/store/fusiongamingonline/e85497a0877911e79bd1b58786c09dea/large/fusiongamingonline_logo2.png"
+
 const renderBuyNowBtn = (params) => {
   return (
     <Button
@@ -95,10 +97,15 @@ export default function CardTable({ data }) {
       websiteLogo = hocImage;
     } else if (website === "kanatacg") {
       websiteLogo = wtImage;
+    } else if (website === "fusion") {
+      websiteLogo = fusionImage;
     }
 
     for (const card of data[website]) {
       for (const condition of card.stock) {
+        if (website === 'fusion') {
+          console.log('card found on fusion', card)
+        };
         rows.push({
           name: card.name,
           set: card.set,
