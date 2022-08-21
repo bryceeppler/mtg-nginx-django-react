@@ -12,6 +12,8 @@ import HelpCenterTwoToneIcon from "@mui/icons-material/HelpCenterTwoTone";
 import { Box } from "@mui/system";
 
 axios.defaults.baseURL = "http://54.225.140.11/api/";
+// axios.defaults.baseURL = "http://localhost:8000/api/";
+
 
 
 // modal styling temporarily
@@ -104,7 +106,7 @@ export default function CardDisplay() {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             snapcaster was created to help Canadian MTG enthusiasts find the cheapest card
             prices from Canadian vendors. All prices are in CAD. Currently, we support Fusion Gaming, HouseofCards, Gauntlet Games,
-            and WizardsTower. If you would like to see another site indexed on snapcaster, or encounter
+            401games, and WizardsTower. If you would like to see another site indexed on snapcaster, or encounter
             any bugs, email me at epplerdev@gmail.com.
           </Typography>
 

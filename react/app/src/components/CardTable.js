@@ -10,7 +10,11 @@ const hocImage =
 const wtImage =
   "https://i.ibb.co/hm3qKWc/wizardstower-removebg-preview.png";
 
-const fusionImage = "https://cc-client-assets.s3.amazonaws.com/store/fusiongamingonline/e85497a0877911e79bd1b58786c09dea/large/fusiongamingonline_logo2.png"
+const fusionImage = 
+  "https://cc-client-assets.s3.amazonaws.com/store/fusiongamingonline/e85497a0877911e79bd1b58786c09dea/large/fusiongamingonline_logo2.png";
+
+const four01Image =
+  'https://cdn.shopify.com/s/files/1/1704/1809/files/Logo_For_Website_260x_b5b9ece0-d6a5-4807-9427-0d488c650cb7_320x.png?v=1582044237';
 
 const renderBuyNowBtn = (params) => {
   return (
@@ -99,6 +103,8 @@ export default function CardTable({ data }) {
       websiteLogo = wtImage;
     } else if (website === "fusion") {
       websiteLogo = fusionImage;
+    } else if (website === 'four01') {
+      websiteLogo = four01Image;
     }
 
     for (const card of data[website]) {
