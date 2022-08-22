@@ -7,8 +7,15 @@ from .scrapers.FusionScraper import FusionScraper
 from .scrapers.Four01Scraper import Four01Scraper
 import json
 import re
+import concurrent.futures
 
 class getPrice(APIView):
+    results = []
+    def transform(self, scraper):
+        scraper.scrape()
+        self.results.append(scraper.getResults())
+        return 
+
 
     def get(self, request):
         # get "name" parameter from request
@@ -21,6 +28,20 @@ class getPrice(APIView):
         kanatacgScraper = KanatacgScraper(name)
         fusionScraper = FusionScraper(name)
         four01Scraper = Four01Scraper(name)
+
+        scrapers = [
+            houseOfCardsScraper,
+            gauntletScraper,
+            kanatacgScraper,
+            fusionScraper,
+            four01Scraper
+        ]
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+            results = executor.map(self.transform, scrapers)
+            print(results)
+
+        return Response(self.results)
 
         print('Scraping HouseOfCards')
         houseOfCardsScraper.scrape()
