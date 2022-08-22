@@ -105,7 +105,8 @@ class Four01Scraper():
                 'set': set,
                 'image': image,
                 'link': url,
-                'stock': stock
+                'stock': stock,
+                'website': 'four01'
             })
 
         self.results = cardList

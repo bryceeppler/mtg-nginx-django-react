@@ -97,7 +97,9 @@ class FusionScraper():
                     'link': link,
                     'image': imageUrl,
                     'set': setName,
-                    'stock': [(condition,price)]
+                    'stock': [(condition,price)],
+                    'website': 'fusion'
+
                 }
 
             stockList.append(results)

@@ -2,12 +2,12 @@ from bs4 import BeautifulSoup
 import requests
 import string
 
-class KanatacgScraper():
+class GauntletScraper():
     def __init__(self, cardName):
         self.cardName = cardName
-        self.results = {}
-        self.baseUrl = 'https://www.kanatacg.com'
-        self.searchUrl = self.baseUrl + '/products/search?query='
+        self.results = []
+        self.baseUrl = 'https://www.gauntletgamesvictoria.ca'
+        self.searchUrl = self.baseUrl + '/products/search?q='
         self.url = self.createUrl()
 
     def getResults(self):
@@ -17,12 +17,11 @@ class KanatacgScraper():
         url = self.searchUrl
         nameArr = self.cardName.split()
         for word in nameArr:
-            url +=word
+            url += word
             if word != nameArr[len(nameArr)-1]: # then we don't have last item, add +
-                url+= '+'
-            else: pass
+                url+= '+' 
+            else: url+= '&c1'
         return url
-
 
     def compareCardNames(self, cardName, cardName2):
         """
@@ -35,13 +34,13 @@ class KanatacgScraper():
             return True
         else:
             return False
-
+        
 
     def scrape(self):
         page = requests.get(self.url)
-
+ 
         sp = BeautifulSoup(page.text, 'html.parser')
-        cards = sp.select('table.invisible-table tr')
+        cards = sp.select('li.product div.inner')
 
         stockList = []
 
@@ -50,50 +49,51 @@ class KanatacgScraper():
             # TODO
 
             # Verify card name is correct
-            checkNameTag = card.select('td')[1]
-            checkName = checkNameTag.select_one('a')        
-            if not checkName:
-                continue
-            if not self.compareCardNames(self.cardName, checkName.getText()):
+            checkName = card.select_one('div.image a')['title']
+            if not self.compareCardNames(self.cardName, checkName):
                 continue
 
             # For this card variant, get the stock
             variantStockList = []
-            variantConditions = card.select('tr.variantRow')
+            variantConditions = card.select('div.variant-row')
 
-            # For each item get the condition and price
+            # For each item, get the condition and price
             for c in variantConditions:
-                condition = c.select_one('td.variantInfo').getText().replace('Condition: ', '').replace('-Mint, English', '')
-                if "Brand New" in condition: # then it's not a MTG single
+                if 'no-stock' in c['class']:
                     continue
-                elif "NM" in condition:
+                condition = c.select_one('span.variant-description').getText()
+                if "NM" in condition:
                     condition="NM"
-                elif "Slight" in condition:
+                elif "Light" in condition:
                     condition="LP"
                 elif "Moderate" in condition:
                     condition="MP"
-                elif "Heav" in condition:
+                elif "Heavy" in condition:
                     condition="HP"
-                price = float(c.select('td')[1].getText().replace('CAD$ ', ''))
+
+                price = float(c.select_one('form.add-to-cart-form')['data-price'].replace('CAD$ ', ''))
+
+                # Verify condition and price are not duplicates
                 if (condition, price) not in variantStockList:
                     variantStockList.append((condition, price))
-                
-            # If stockList is empty, continue
-            if not variantStockList:
+
+            if len(variantStockList) == 0:
                 continue
 
-            name = card.select('td')[1].select_one('a').getText()
-            link = self.baseUrl + card.select('td')[1].select_one('a')['href']
-            imageUrl = card.select_one('td a')['href']
-            setName = card.select('td')[1].select_one('small').getText()
+            name = card.select_one('div.image a')['title']
+            link = self.baseUrl + card.select_one('div.image a')['href']
+            imageUrl = card.select_one('img')['src']
+            setName = card.select_one('span.category').getText()
 
             results = {
                 'name': name,
                 'link': link,
                 'image': imageUrl,
                 'set': setName,
-                'stock': variantStockList
+                'stock': variantStockList,
+                'website': 'gauntlet'
+
             }
             stockList.append(results)
-
+            
         self.results = stockList

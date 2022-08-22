@@ -109,63 +109,64 @@ const columns = [
   },
 ];
 
+export default function BulkTable({ data }) {
+  function uuidv4() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+      (
+        c ^
+        (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+      ).toString(16)
+    );
+  }
 
-export default function BulkTable( {data} ) {
-    function uuidv4() {
-        return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
-          (
-            c ^
-            (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-          ).toString(16)
-        );
+  const [pageSize, setPageSize] = useState(5);
+
+  const rows = [];
+  //   PROCESS DATA ROWS FOR TABLE
+  try {
+    for (const card of data["results"]) {
+      const websiteLogo = null;
+      if (card["website"] === "gauntlet") {
+        websiteLogo = gauntletImage;
+      } else if (card["website"] === "houseOfCards") {
+        websiteLogo = hocImage;
+      } else if (card["website"] === "kanatacg") {
+        websiteLogo = wtImage;
+      } else if (card["website"] === "fusion") {
+        websiteLogo = fusionImage;
+      } else if (card["website"] === "four01") {
+        websiteLogo = four01Image;
       }
 
-      const [pageSize, setPageSize] = useState(5);
+      rows.push({
+        id: uuidv4(),
+        image: card["image"],
+        name: card["name"],
+        set: card["set"],
+        price: card["stock"][0][1],
+        condition: card["stock"][0][0],
+        website: card["website"],
+        websiteLogo: websiteLogo,
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
 
-      const rows = []
-    //   PROCESS DATA ROWS FOR TABLE
-    try{
-    for (const card of data['results']) {
-        const websiteLogo = null
-        if (card['website'] === "gauntlet") {
-            websiteLogo = gauntletImage;
-          } else if (card['website'] === "houseOfCards") {
-            websiteLogo = hocImage;
-          } else if (card['website'] === "kanatacg") {
-            websiteLogo = wtImage;
-          } else if (card['website'] === "fusion") {
-            websiteLogo = fusionImage;
-          } else if (card['website'] === 'four01') {
-            websiteLogo = four01Image;
-          }
-
-        rows.push({
-            id: uuidv4(),
-            image: card['image'],
-            name: card['name'],
-            set: card['set'],
-            price: card['stock'][1],
-            condition: card['stock'][0],
-            website: card['website'],
-            websiteLogo: websiteLogo,
-
-        })
-      }
-    }catch (error) {console.log(error)}
-    
-
-  return <div>
-            <DataGrid
+  return (
+    <div>
+      <DataGrid
         components={{ Toolbar: CustomToolbar }}
-          columns={columns}
-          rows={rows}
-          pageSize={pageSize}
-          onPageSizeChange={(newPage) => setPageSize(newPage)}
-          rowsPerPageOptions={[5, 10, 25, 50]}
-          getRowId={(row) => uuidv4()}
-          rowHeight={100}
-          sx={{backgroundColor: '#222222'}}
-          autoHeight
-        />
-  </div>;
+        columns={columns}
+        rows={rows}
+        pageSize={pageSize}
+        onPageSizeChange={(newPage) => setPageSize(newPage)}
+        rowsPerPageOptions={[5, 10, 25, 50]}
+        getRowId={(row) => uuidv4()}
+        rowHeight={100}
+        sx={{ backgroundColor: "#222222" }}
+        autoHeight
+      />
+    </div>
+  );
 }

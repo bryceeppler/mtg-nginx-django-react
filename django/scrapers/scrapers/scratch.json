@@ -1,0 +1,1906 @@
+{
+  "is*amp_on": 1,
+  "auto_facets": false,
+  "term": "counterspell",
+  "uuid": "d3cae9c0-9d9b-4fe3-ad81-873270df14b5",
+  "total_results": 27,
+  "items": [
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "6859237490875",
+      "p_max": "",
+      "sku": "MH2267",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["157917773899"],
+            ["265261842619"],
+            ["268483363003"],
+            ["270311030971"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Uncommon",
+            "Set_Modern Horizons 2",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Modern Horizons 2"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          40378303807675,
+          [
+            ["Price", ["CAD:2.50"]],
+            ["Product-sku", ["MH2267"]],
+            ["Sellable", [true]],
+            ["Title", ["NM"]]
+          ]
+        ],
+        [
+          42153695346875,
+          [
+            ["Price", ["CAD:2.25"]],
+            ["Product-sku", ["MH2267SP"]],
+            ["Sellable", [false]],
+            ["Title", ["SP"]]
+          ]
+        ],
+        [
+          42153695412411,
+          [
+            ["Price", ["CAD:2.00"]],
+            ["Product-sku", ["MH2267MP"]],
+            ["Sellable", [false]],
+            ["Title", ["MP"]]
+          ]
+        ]
+      ],
+      "skus": ["MH2267", "MH2267SP", "MH2267MP"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: {U}{U}Card Type: InstantCard Text: Counter target spell.Artist: Zack Stella",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/e4b7c9b2-5455-4a06-af25-7d89c5c4bcf8",
+      "l": "Counterspell (MH2)",
+      "p": "2.50",
+      "s": "6859237490875::40378303807675",
+      "u": "/products/counterspell-mh2",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/1920dae4-fb92-4f19-ae4b-eb3276b8dac7_large.png?v=1639955594",
+      "v": "Modern Horizons 2"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "1336048844875",
+      "p_max": "",
+      "sku": "ICE064",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["152853119051"],
+            ["157917773899"],
+            ["268483363003"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Common",
+            "Set_Ice Age",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Ice Age"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          12286902665291,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.00"]],
+            ["Product-sku", ["ICE064"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          12286902698059,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:2.70"]],
+            ["Product-sku", ["ICE064SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          12286902730827,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:2.40"]],
+            ["Product-sku", ["ICE064MP"]],
+            ["Sellable", [true]]
+          ]
+        ]
+      ],
+      "skus": ["ICE064", "ICE064SP", "ICE064MP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/f2c6d9b8-d002-4dbf-a2ba-c15a198b15eb",
+      "l": "Counterspell (ICE)",
+      "p": "2.40",
+      "s": "1336048844875::12286902665291",
+      "u": "/products/02dcd191-aecf-11e7-f130-6652c76c82e0",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/aedbcbaa-40f0-485f-8427-778edc2d2ec0_large.jpg?v=1659656742",
+      "v": "Ice Age"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "3882266394699",
+      "p_max": "",
+      "sku": "MMQ069",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["152856723531"],
+            ["157917773899"],
+            ["165597282379"],
+            ["165817057355"],
+            ["268483363003"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Common",
+            "Set_Mercadian Masques",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Mercadian Masques"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          29262525726795,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.25"]],
+            ["Product-sku", ["MMQ069"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          29262525792331,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:2.93"]],
+            ["Product-sku", ["MMQ069SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          29262525825099,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:2.60"]],
+            ["Product-sku", ["MMQ069MP"]],
+            ["Sellable", [true]]
+          ]
+        ]
+      ],
+      "skus": ["MMQ069", "MMQ069SP", "MMQ069MP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/bfd19455-6230-4f08-b867-f780246d5e0f",
+      "l": "Counterspell (MMQ)",
+      "p": "2.60",
+      "s": "3882266394699::29262525726795",
+      "u": "/products/02dcd191-aecf-11e7-f130-665792f69145",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/7bd03c80-7812-4704-9e07-9cf73b49c01f_large.jpg?v=1659574929",
+      "v": "Mercadian Masques"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "3691206410315",
+      "p_max": "",
+      "sku": "EMA043",
+      "att": [
+        [
+          "Categories",
+          [
+            ["132837376075"],
+            ["141730480203"],
+            ["152819368011"],
+            ["152847286347"],
+            ["157917773899"],
+            ["268483363003"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Common",
+            "Set_Eternal Masters",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Eternal Masters"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          28728599609419,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:2.00"]],
+            ["Product-sku", ["EMA043"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          28728599642187,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:1.80"]],
+            ["Product-sku", ["EMA043SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          28728599674955,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:1.60"]],
+            ["Product-sku", ["EMA043MP"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["EMA043", "EMA043SP", "EMA043MP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/722cecc8-c29c-4729-a2ca-8b7aa474eedd",
+      "l": "Counterspell (EMA)",
+      "p": "2.00",
+      "s": "3691206410315::28728599609419",
+      "u": "/products/02dcd191-aecf-11e7-f130-65b641d00211",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/0c9a7cb0-5bff-48ff-b620-2838816ac9b5_large.jpg?v=1659653119",
+      "v": "Eternal Masters"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "6875528954043",
+      "p_max": "",
+      "sku": "FMH2308",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["155877343307"],
+            ["157917741131"],
+            ["265261842619"],
+            ["268483363003"],
+            ["270311030971"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Foil",
+            "Foil or Non-Foil_Foil",
+            "Rarity_Uncommon",
+            "Set_Modern Horizons 2",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Modern Horizons 2"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          40460852658363,
+          [
+            ["Price", ["CAD:17.00"]],
+            ["Product-sku", ["FMH2308"]],
+            ["Sellable", [true]],
+            ["Title", ["NM"]]
+          ]
+        ],
+        [
+          42153695838395,
+          [
+            ["Price", ["CAD:15.30"]],
+            ["Product-sku", ["FMH2308SP"]],
+            ["Sellable", [false]],
+            ["Title", ["SP"]]
+          ]
+        ],
+        [
+          42153696035003,
+          [
+            ["Price", ["CAD:13.60"]],
+            ["Product-sku", ["FMH2308MP"]],
+            ["Sellable", [false]],
+            ["Title", ["MP"]]
+          ]
+        ]
+      ],
+      "skus": ["FMH2308", "FMH2308SP", "FMH2308MP"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: {U}{U}Card Type: InstantCard Text: Counter target spell.Artist: Ryan Yee",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/cec88bc1-c45f-4c15-893f-6205657b1034",
+      "l": "Counterspell - Borderless (MH2) (Foil)",
+      "p": "17.00",
+      "s": "6875528954043::40460852658363",
+      "u": "/products/counterspell-borderless-mh2-foil",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/308_1a842bef-810e-4b34-b3c0-a881790b1804_large.png?v=1639955648",
+      "v": "Modern Horizons 2"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "2.27",
+      "v_c": 4,
+      "id": "1473519583307",
+      "p_max": "2.60",
+      "sku": "TMP057",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["152853348427"],
+            ["157917773899"],
+            ["165597577291"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Common",
+            "Set_Tempest",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Tempest"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          13512593539147,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.25"]],
+            ["Product-sku", ["TMP057"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          13512593571915,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:2.93"]],
+            ["Product-sku", ["TMP057SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          13512593604683,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:2.60"]],
+            ["Product-sku", ["TMP057MP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          41884374761659,
+          [
+            ["Condition", ["HP"]],
+            ["Price", ["CAD:2.27"]],
+            ["Product-sku", ["TMP057HP"]],
+            ["Sellable", [true]]
+          ]
+        ]
+      ],
+      "skus": ["TMP057", "TMP057SP", "TMP057MP", "TMP057HP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/405efd0f-1bd9-462a-913a-e5d188bb68e3",
+      "l": "Counterspell (TMP)",
+      "p": "2.27",
+      "s": "1473519583307::13512593539147",
+      "u": "/products/02dcd191-aecf-11e7-f130-665cc7b9617a",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/dacdd380-71cf-4832-bd02-3697501325f3_large.jpg?v=1659737224",
+      "v": "Tempest"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "6612362526907",
+      "p_max": "",
+      "sku": "STA015",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["157917773899"],
+            ["260443111611"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Rare",
+            "Set_Strixhaven Mystical Archive",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Strixhaven Mystical Archive"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          39607622369467,
+          [
+            ["Price", ["CAD:4.25"]],
+            ["Product-sku", ["STA015"]],
+            ["Sellable", [true]],
+            ["Title", ["NM"]]
+          ]
+        ],
+        [
+          42191856959675,
+          [
+            ["Price", ["CAD:3.83"]],
+            ["Product-sku", ["STA015SP"]],
+            ["Sellable", [false]],
+            ["Title", ["SP"]]
+          ]
+        ],
+        [
+          42191857025211,
+          [
+            ["Price", ["CAD:3.40"]],
+            ["Product-sku", ["STA015MP"]],
+            ["Sellable", [false]],
+            ["Title", ["MP"]]
+          ]
+        ]
+      ],
+      "skus": ["STA015", "STA015SP", "STA015MP"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: Card Type: InstantCard Text: Counter target spell.Flavour Text: \"One need not know the specific details of a spell to suppress its effect. Simply arrange the rules of the reality within which the spell operates.\" -Imbraham, Quandrix dean ",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/44255bc0-8d93-4c82-a60b-aa1ded9c533c",
+      "l": "Counterspell (STA)",
+      "p": "4.25",
+      "s": "6612362526907::39607622369467",
+      "u": "/products/0a6f6e36-8bcf-11eb-f3d6-9247596caf55",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/714fe308b2cc27563d00347369a96eddd7873d83_large.png?v=1639955651",
+      "v": "Strixhaven Mystical Archive"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "11818484815",
+      "p_max": "",
+      "sku": "7ED067",
+      "att": [
+        [
+          "Categories",
+          [
+            ["132495507531"],
+            ["141730480203"],
+            ["152819368011"],
+            ["157917773899"],
+            ["268483363003"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Common",
+            "Set_Seventh Edition",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Seventh Edition"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          48020752847,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.00"]],
+            ["Product-sku", ["7ED067"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          31830746071115,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:2.70"]],
+            ["Product-sku", ["7ED067SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          31830746103883,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:2.40"]],
+            ["Product-sku", ["7ED067MP"]],
+            ["Sellable", [true]]
+          ]
+        ]
+      ],
+      "skus": ["7ED067", "7ED067SP", "7ED067MP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/72d30bc1-fb7b-42d0-81e9-feab58ec720c",
+      "l": "Counterspell (7ED)",
+      "p": "2.40",
+      "s": "11818484815::48020752847",
+      "u": "/products/counterspell-7ed",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/29bb1b85-9444-4bfa-b622-092a6873631c_large.jpg?v=1659732510",
+      "v": "Seventh Edition"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "2.48",
+      "v_c": 3,
+      "id": "3691242389579",
+      "p_max": "2.75",
+      "sku": "FEMA043",
+      "att": [
+        [
+          "Categories",
+          [
+            ["132837376075"],
+            ["141730480203"],
+            ["152819368011"],
+            ["152847286347"],
+            ["157917741131"],
+            ["268483363003"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Foil",
+            "Foil or Non-Foil_Foil",
+            "Rarity_Common",
+            "Set_Eternal Masters",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Eternal Masters"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          28728897568843,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:2.75"]],
+            ["Product-sku", ["FEMA043"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          28728897601611,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:2.48"]],
+            ["Product-sku", ["FEMA043SP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          28728897634379,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:2.20"]],
+            ["Product-sku", ["FEMA043MP"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["FEMA043", "FEMA043SP", "FEMA043MP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/b1fdbb1d-2d7c-41bd-9fac-f4d954f4f2fa",
+      "l": "Counterspell (Foil) (EMA)",
+      "p": "2.48",
+      "s": "3691242389579::28728897568843",
+      "u": "/products/02dcd191-aecf-11e7-f130-65bb43b6cbc6",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/foilimage_154c1d98-688d-4e99-867b-43284d8bf05c_large.jpg?v=1659884191",
+      "v": "Eternal Masters"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "6092483330235",
+      "p_max": "",
+      "sku": "CMR395",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["157917773899"],
+            ["166367002699"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Common",
+            "Set_Commander Legends",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Commander Legends"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          37602387820731,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.25"]],
+            ["Product-sku", ["CMR395"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          39989527511227,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:2.93"]],
+            ["Product-sku", ["CMR395SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          39989527642299,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:2.60"]],
+            ["Product-sku", ["CMR395MP"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["CMR395", "CMR395SP", "CMR395MP"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: Card Type: InstantCard Text: Counter target spell. ",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/3363acd3-b097-4983-a986-e160d2c249ae",
+      "l": "Counterspell - Commander Deck (CMR)",
+      "p": "3.25",
+      "s": "6092483330235::37602387820731",
+      "u": "/products/0a6f6e36-8bcf-11eb-f3d6-204c8a3ae5bf",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/fae122b947fc07e6c645f5e8cb87cea5b36cd763_large.png?v=1639955654",
+      "v": "Commander Legends"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "4170701013067",
+      "p_max": "",
+      "sku": "DD2024",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["157917773899"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Common",
+            "Set_Duel Decks: Jace vs. Chandra",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Duel Decks: Jace vs. Chandra"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          30353244553291,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.75"]],
+            ["Product-sku", ["DD2024"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          30353244586059,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:3.38"]],
+            ["Product-sku", ["DD2024SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          30353244618827,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:3.00"]],
+            ["Product-sku", ["DD2024MP"]],
+            ["Sellable", [true]]
+          ]
+        ]
+      ],
+      "skus": ["DD2024", "DD2024SP", "DD2024MP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/3e285757-0aad-45c1-b318-9049e8578cf1",
+      "l": "Counterspell (DD2)",
+      "p": "3.00",
+      "s": "4170701013067::30353244553291",
+      "u": "/products/02dcd191-aecf-11e7-f130-65b55dddd24f",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/71cfcba5-1571-48b8-a3db-55dca135506e_large.jpg?v=1659649213",
+      "v": "Duel Decks: Jace vs. Chandra"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "4454702415947",
+      "p_max": "",
+      "sku": "4ED065",
+      "att": [
+        [
+          "Categories",
+          [
+            ["132495343691"],
+            ["141730480203"],
+            ["152819368011"],
+            ["157917773899"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Uncommon",
+            "Set_Fourth Edition",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Fourth Edition"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          31775119638603,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.50"]],
+            ["Product-sku", ["4ED065"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          31775119671371,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:3.15"]],
+            ["Product-sku", ["4ED065SP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          31775119704139,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:2.80"]],
+            ["Product-sku", ["4ED065MP"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["4ED065", "4ED065SP", "4ED065MP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/3c8db7b1-81fd-43ff-b065-69e9abc42185",
+      "l": "Counterspell (4ED)",
+      "p": "3.15",
+      "s": "4454702415947::31775119638603",
+      "u": "/products/02dcd191-aecf-11e7-f130-65b33e99a4f5",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/e8493631-6c9c-40a8-b7de-ecf26ba6bf7d_large.jpg?v=1660062532",
+      "v": "Fourth Edition"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 5,
+      "id": "11818173647",
+      "p_max": "",
+      "sku": "3ED054",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["157917773899"],
+            ["267724292283"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Uncommon",
+            "Set_Revised Edition",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Revised Edition"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          48019804879,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:6.00"]],
+            ["Product-sku", ["3ED054"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          31984584130635,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:5.40"]],
+            ["Product-sku", ["3ED054SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          31984584228939,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:4.80"]],
+            ["Product-sku", ["3ED054MP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          43224111874235,
+          [
+            ["Condition", ["HP"]],
+            ["Price", ["CAD:4.20"]],
+            ["Product-sku", ["3ED054HP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          43224111939771,
+          [
+            ["Condition", ["DMG"]],
+            ["Price", ["CAD:3.60"]],
+            ["Product-sku", ["3ED054DMG"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["3ED054", "3ED054SP", "3ED054MP", "3ED054HP", "3ED054DMG"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/f959610a-8027-4f4a-90f9-38ac236deca4",
+      "l": "Counterspell (3ED)",
+      "p": "4.80",
+      "s": "11818173647::48019804879",
+      "u": "/products/counterspell-3ed",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/0a1b4e2e-5459-4fae-81d9-1e882647daac_large.jpg?v=1659729499",
+      "v": "Revised Edition"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "11832422799",
+      "p_max": "",
+      "sku": "S99034",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["152825593931"],
+            ["157917773899"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Uncommon",
+            "Set_Starter 1999",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Starter 1999"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          48077342159,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.75"]],
+            ["Product-sku", ["S99034"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          32764862431307,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:3.38"]],
+            ["Product-sku", ["S99034SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          32764862627915,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:3.00"]],
+            ["Product-sku", ["S99034MP"]],
+            ["Sellable", [true]]
+          ]
+        ]
+      ],
+      "skus": ["S99034", "S99034SP", "S99034MP"],
+      "c": "CAD",
+      "d": "",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/81679642-79b3-4a3f-93b7-d5048a874aae",
+      "l": "Counterspell (S99)",
+      "p": "3.00",
+      "s": "11832422799::48077342159",
+      "u": "/products/counterspell-s99",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/b2227782-6709-4d0a-82b4-5070a7ddb647_large.jpg?v=1659736668",
+      "v": "Starter 1999"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "1323448959051",
+      "p_max": "",
+      "sku": "FSS1004",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["152852299851"],
+            ["157917741131"],
+            ["268483363003"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Foil",
+            "Foil or Non-Foil_Foil",
+            "Rarity_Rare",
+            "Set_Signature Spellbook: Jace",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Signature Spellbook: Jace"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          12185172181067,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:11.00"]],
+            ["Product-sku", ["FSS1004"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          32884296384587,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:9.90"]],
+            ["Product-sku", ["FSS1004SP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          32884296581195,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:8.80"]],
+            ["Product-sku", ["FSS1004MP"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["FSS1004", "FSS1004SP", "FSS1004MP"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: Card Type: InstantCard Text: Counter target spell.Artist: Jason ChanRarity: Rare ",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/ba0a92c1-becf-4860-9fb9-0432074713eb",
+      "l": "Counterspell (Foil)",
+      "p": "9.90",
+      "s": "1323448959051::12185172181067",
+      "u": "/products/02dcd191-aecf-11e8-ed44-6f4cce17b542",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/60150e921f124f08ee6eccbf985a37a2d6888b9c_large.jpg?v=1639955562",
+      "v": "Signature Spellbook: Jace"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "2.93",
+      "v_c": 3,
+      "id": "1323448991819",
+      "p_max": "3.25",
+      "sku": "SS1004",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["152852299851"],
+            ["157917773899"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Rare",
+            "Set_Signature Spellbook: Jace",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Signature Spellbook: Jace"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          12185172377675,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:3.25"]],
+            ["Product-sku", ["SS1004"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          32884296646731,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:2.93"]],
+            ["Product-sku", ["SS1004SP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          32884296679499,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:2.60"]],
+            ["Product-sku", ["SS1004MP"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["SS1004", "SS1004SP", "SS1004MP"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: Card Type: InstantCard Text: Counter target spell.Artist: Jason ChanRarity: Rare ",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/1bb901b1-cf5a-487f-a0a2-ebd7477e837b",
+      "l": "Counterspell",
+      "p": "2.93",
+      "s": "1323448991819::12185172377675",
+      "u": "/products/02dcd191-aecf-11e8-ed44-6f4cce086d05",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/54a8f4baf31e2cfec49210bd1d3fb653982b8843_large.jpg?v=1639955328",
+      "v": "Signature Spellbook: Jace"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "42.50",
+      "v_c": 5,
+      "id": "3690116743243",
+      "p_max": "50.00",
+      "sku": "2ED055",
+      "att": [
+        [
+          "Categories",
+          [
+            ["133678071883"],
+            ["141730480203"],
+            ["152819368011"],
+            ["152854134859"],
+            ["155877343307"],
+            ["157917773899"],
+            ["268483363003"],
+            ["277751759035"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Uncommon",
+            "Set_Unlimited Edition",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Unlimited Edition"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          28720622731339,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:85.00"]],
+            ["Product-sku", ["2ED055"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          28720622764107,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:76.50"]],
+            ["Product-sku", ["2ED055SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          28720622796875,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:68.00"]],
+            ["Product-sku", ["2ED055MP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          41840431923387,
+          [
+            ["Condition", ["HP"]],
+            ["Price", ["CAD:50.00"]],
+            ["Product-sku", ["2ED055HP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          42093308870843,
+          [
+            ["Condition", ["DMG"]],
+            ["Price", ["CAD:42.50"]],
+            ["Product-sku", ["2ED055DMG"]],
+            ["Sellable", [true]]
+          ]
+        ]
+      ],
+      "skus": ["2ED055", "2ED055SP", "2ED055MP", "2ED055HP", "2ED055DMG"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: Card Type: InstantCard Text: Counter target spell.Artist: Mark PooleRarity: Uncommon ",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/edd4e866-e663-4874-ad88-163842df1cb9",
+      "l": "Counterspell (2ED)",
+      "p": "42.50",
+      "s": "3690116743243::28720622731339",
+      "u": "/products/02dcd191-aecf-11e8-ed44-e2d5bfffe2a0",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/70cdb5992c30f65fe4b625eb5c4cf40988162950_large.jpg?v=1639955337",
+      "v": "Unlimited Edition"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 3,
+      "id": "6063956066491",
+      "p_max": "",
+      "sku": "CMR632",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["157917773899"],
+            ["166367002699"],
+            ["268483363003"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Common",
+            "Set_Commander Legends",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Commander Legends"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          37449456353467,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:4.75"]],
+            ["Product-sku", ["CMR632"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          39989527675067,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:4.28"]],
+            ["Product-sku", ["CMR632SP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          39989527871675,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:3.80"]],
+            ["Product-sku", ["CMR632MP"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["CMR632", "CMR632SP", "CMR632MP"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: Card Type: InstantCard Text: Counter target spell. ",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/7e3e8b82-371e-43e2-90ae-bce7b1d496d2",
+      "l": "Counterspell - Extended Art (CMR)",
+      "p": "4.28",
+      "s": "6063956066491::37449456353467",
+      "u": "/products/0a6f6e36-8bcf-11eb-f3d6-204ee8971513",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/2c3019d6c72b4b8fba18c5aa8e3113d44666a51f_large.png?v=1639955664",
+      "v": "Commander Legends"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "6.30",
+      "v_c": 3,
+      "id": "6092550242491",
+      "p_max": "7.00",
+      "sku": "FCMR632",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["157917741131"],
+            ["166367002699"],
+            ["268483363003"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Foil",
+            "Foil or Non-Foil_Foil",
+            "Rarity_Common",
+            "Set_Commander Legends",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Commander Legends"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          37602690465979,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:7.00"]],
+            ["Product-sku", ["FCMR632"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          39988492468411,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:6.30"]],
+            ["Product-sku", ["FCMR632SP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          39988492632251,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:5.60"]],
+            ["Product-sku", ["FCMR632MP"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["FCMR632", "FCMR632SP", "FCMR632MP"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: Card Type: InstantCard Text: Counter target spell. ",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/45222e81-f7c0-46c1-a9e1-a68fe42d22d5",
+      "l": "Counterspell - Extended Art (Foil) (CMR)",
+      "p": "6.30",
+      "s": "6092550242491::37602690465979",
+      "u": "/products/0a6f6e36-8bcf-11eb-f3d6-25e741b10366",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/faf08045ac238050e5ed0bd17c998c4afc6cc315_large.png?v=1639955667",
+      "v": "Commander Legends"
+    },
+    {
+      "p_min_c": "0.00",
+      "p_spl": 0,
+      "p_c": "0.00",
+      "p_max_c": "0.00",
+      "p_min": "",
+      "v_c": 5,
+      "id": "6206547656891",
+      "p_max": "",
+      "sku": "LEB055",
+      "att": [
+        [
+          "Categories",
+          [
+            ["141730480203"],
+            ["152819368011"],
+            ["155877343307"],
+            ["157917773899"],
+            ["268483363003"],
+            ["276715307195"],
+            ["281791267003"],
+            ["282488668347"],
+            ["4039966735"],
+            ["449226767"],
+            ["4588634127"],
+            ["56298668107"],
+            ["56820170827"],
+            ["77120536651"],
+            ["77126893643"],
+            ["77406666827"],
+            ["79377334347"],
+            ["80308043851"]
+          ]
+        ],
+        [
+          "Tag",
+          [
+            "Availability_Only Show In Stock Items",
+            "Colour_Blue",
+            "Finish_Normal",
+            "Foil or Non-Foil_Non-Foil",
+            "Rarity_Uncommon",
+            "Set_Limited Edition Beta",
+            "TCGSING"
+          ]
+        ],
+        ["Type", ["Magic: The Gathering Singles"]],
+        ["Vendor", ["Limited Edition Beta"]]
+      ],
+      "iso": false,
+      "vrc": {},
+      "vra": [
+        [
+          38046471487675,
+          [
+            ["Condition", ["NM"]],
+            ["Price", ["CAD:1000.00"]],
+            ["Product-sku", ["LEB055"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          38046471520443,
+          [
+            ["Condition", ["SP"]],
+            ["Price", ["CAD:900.00"]],
+            ["Product-sku", ["LEB055SP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          38046471553211,
+          [
+            ["Condition", ["MP"]],
+            ["Price", ["CAD:800.00"]],
+            ["Product-sku", ["LEB055MP"]],
+            ["Sellable", [false]]
+          ]
+        ],
+        [
+          38046471585979,
+          [
+            ["Condition", ["HP"]],
+            ["Price", ["CAD:700.00"]],
+            ["Product-sku", ["LEB055HP"]],
+            ["Sellable", [true]]
+          ]
+        ],
+        [
+          43198524686523,
+          [
+            ["Condition", ["DMG"]],
+            ["Price", ["CAD:600.00"]],
+            ["Product-sku", ["LEB055DMG"]],
+            ["Sellable", [false]]
+          ]
+        ]
+      ],
+      "skus": ["LEB055", "LEB055SP", "LEB055MP", "LEB055HP", "LEB055DMG"],
+      "c": "CAD",
+      "d": "CounterspellCasting Cost: Card Type: InstantCard Text: Counter target spell.Artist: Mark PooleRarity: Uncommon ",
+      "f": 0,
+      "t2": "https://assets.instantsearchplus.com/thumbs/cdn.shopify.com/8310f4d4-ec3c-409b-a9a2-a263c09c334f",
+      "l": "Counterspell (LEB)",
+      "p": "700.00",
+      "s": "6206547656891::38046471487675",
+      "u": "/products/02dcd191-aecf-11e8-ed44-e2b0bf32f80e",
+      "t": "https://cdn.shopify.com/s/files/1/1704/1809/products/8d1524f9ed0bf5e011fee6cac25d1fb245720ef8_large.jpg?v=1639955588",
+      "v": "Limited Edition Beta"
+    }
+  ],
+  "facets": [],
+  "alternatives": [],
+  "sort_by": "relevency",
+  "p": 1,
+  "isp_quick_view_mode": 0,
+  "total_p": 2,
+  "results_for": null,
+  "narrow": [
+    ["Isp-in-stock", "True", "In Stock"],
+    ["Type", "Magic: The Gathering Singles", "Category"]
+  ],
+  "facets_completed": false,
+  "avoid_tag_prefixes": "filter by*,set*,product type*,system*,year*,letter*,attribute*,card type*,category*,color*,colour*,energy*,faction*,holo*,rarity*,brand*,sport*,sets*,style*,type*,unit type*,Pokemon Type*,Finish*,Pokemon Stage*,Trainer*,Attribute Chase*,Events By Day*,Location*,Foil or Non-Foil*,Energy Type**,Author*,Keyword_"
+}

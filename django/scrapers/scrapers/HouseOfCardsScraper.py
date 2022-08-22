@@ -90,7 +90,8 @@ class HouseOfCardsScraper():
                 'link': link,
                 'image': imageUrl,
                 'set': setName,
-                'stock': variantStockList
+                'stock': variantStockList,
+                'website': 'houseOfCards'
             }
 
             stockList.append(results)
