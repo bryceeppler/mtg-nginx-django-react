@@ -4,6 +4,8 @@ from . import views
 
 # will have to change these to .as_view once I implement class based views
 urlpatterns = [
+    path('bulk/', views.getPriceBulk.as_view()),
+
     path('', views.getPrice.as_view()),
 ]
 

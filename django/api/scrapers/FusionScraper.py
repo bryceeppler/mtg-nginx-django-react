@@ -16,6 +16,8 @@ class FusionScraper():
 
     def createUrl(self):
         url = self.searchUrl
+        print("TRYING TO SPLIT ")
+        print(self.cardName)
         nameArr = self.cardName.split()
         for word in nameArr:
             url += word

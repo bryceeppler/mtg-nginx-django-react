@@ -59,6 +59,9 @@ class Four01Scraper():
             image = item['t']
             url = self.siteUrl + item['u']
 
+            if not self.compareCardNames(self.cardName, name):
+                continue 
+            
             stock = []
             for stockItem in item['vra']:
                 item = stockItem[1]

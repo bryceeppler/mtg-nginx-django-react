@@ -14,8 +14,8 @@ import { Link } from "react-router-dom";
 import Container from "@mui/material/Container";
 
 
-axios.defaults.baseURL = "http://54.225.140.11/api/";
-// axios.defaults.baseURL = "http://localhost:8000/api/";
+// axios.defaults.baseURL = "http://54.225.140.11/api/";
+axios.defaults.baseURL = "http://localhost:8000/api/";
 
 
 
