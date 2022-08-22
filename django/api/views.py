@@ -43,39 +43,6 @@ class getPrice(APIView):
 
         return Response(self.results)
 
-        print('Scraping HouseOfCards')
-        houseOfCardsScraper.scrape()
-        print('Scraping Gauntlet')
-        gauntletScraper.scrape()
-        print('Scraping Kanatacg')
-        kanatacgScraper.scrape()
-        print('Scraping Fusion')
-        fusionScraper.scrape()
-        print('Scraping Four01')
-        four01Scraper.scrape()
-
-        print('Retreiving HouseOfCards data')
-        houseOfCardsResults = houseOfCardsScraper.getResults()
-        print('Retreiving Gauntlet data')
-        gauntletResults = gauntletScraper.getResults()
-        print('Retreiving Kanatacg data')
-        kanatacgResults = kanatacgScraper.getResults()
-        print('Retreiving Fusion data')
-        fusionResults = fusionScraper.getResults()
-        print('Retreiving Four01 data')
-        four01Results = four01Scraper.getResults()
-
-        print('Merging results')
-        results = {
-            'houseOfCards': houseOfCardsResults,
-            'gauntlet': gauntletResults,
-            'kanatacg': kanatacgResults,
-            'fusion': fusionResults,
-            'four01': four01Results
-        }
-
-        return Response(results)
-
 
 class getPriceBulk(APIView):
 
