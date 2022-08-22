@@ -2,17 +2,17 @@ from bs4 import BeautifulSoup
 import requests
 import string
 
+from .Scraper import Scraper
 
-class FusionScraper():
+# The FusionScraper URL will only grab in-stock MTG cards
+# sorted by cheapest price
+
+class FusionScraper(Scraper):
     def __init__(self, cardName):
-        self.cardName = cardName
-        self.results = []
+        Scraper.__init__(self, cardName)
         self.baseUrl = 'https://www.fusiongamingonline.com'
-        self.searchUrl = self.baseUrl + "/advanced_search?utf8=%E2%9C%93&search%5Bfuzzy_search%5D="
+        self.searchUrl = self.baseUrl + "/advanced_search?utf8=%E2%9C%93&search%5Bfuzzy_search%5D=&search%5Btags_name_eq%5D=&search%5Bsell_price_gte%5D=&search%5Bsell_price_lte%5D=&search%5Bbuy_price_gte%5D=&search%5Bbuy_price_lte%5D=&search%5Bin_stock%5D=0&search%5Bin_stock%5D=1&buylist_mode=0&search%5Bcategory_ids_with_descendants%5D%5B%5D=&search%5Bcategory_ids_with_descendants%5D%5B%5D=8&search%5Bwith_descriptor_values%5D%5B6%5D=&search%5Bwith_descriptor_values%5D%5B7%5D=&search%5Bwith_descriptor_values%5D%5B9%5D=&search%5Bwith_descriptor_values%5D%5B10%5D=&search%5Bwith_descriptor_values%5D%5B11%5D=&search%5Bwith_descriptor_values%5D%5B13%5D=&search%5Bwith_descriptor_values%5D%5B348%5D="
         self.url = self.createUrl()
-
-    def getResults(self):
-        return self.results
 
     def createUrl(self):
         url = self.searchUrl
@@ -21,21 +21,45 @@ class FusionScraper():
             url += word
             if word != nameArr[len(nameArr)-1]: # then we don't have last item, add +
                 url+= '+' 
-        url += '&search%5Btags_name_eq%5D=&search%5Bsell_price_gte%5D=&search%5Bsell_price_lte%5D=&search%5Bbuy_price_gte%5D=&search%5Bbuy_price_lte%5D=&search%5Bin_stock%5D=0&search%5Bin_stock%5D=1&buylist_mode=0&search%5Bcategory_ids_with_descendants%5D%5B%5D=&search%5Bcategory_ids_with_descendants%5D%5B%5D=8&search%5Bwith_descriptor_values%5D%5B6%5D=&search%5Bwith_descriptor_values%5D%5B7%5D=&search%5Bwith_descriptor_values%5D%5B9%5D=&search%5Bwith_descriptor_values%5D%5B10%5D=&search%5Bwith_descriptor_values%5D%5B11%5D=&search%5Bwith_descriptor_values%5D%5B13%5D=&search%5Bwith_descriptor_values%5D%5B348%5D=&search%5Bwith_descriptor_values%5D%5B361%5D=&search%5Bwith_descriptor_values%5D%5B1259%5D=&search%5Bwith_descriptor_values%5D%5B11805%5D=&search%5Bwith_descriptor_values%5D%5B11806%5D=&search%5Bwith_descriptor_values%5D%5B11832%5D=&search%5Bwith_descriptor_values%5D%5B11833%5D=&search%5Bvariants_with_identifier%5D%5B14%5D%5B%5D=&search%5Bvariants_with_identifier%5D%5B15%5D%5B%5D=&search%5Bsort%5D=name&search%5Bdirection%5D=ascend&commit=Search&search%5Bcatalog_group_id_eq%5D='
+        url += '&search%5Bwith_descriptor_values%5D%5B361%5D=&search%5Bwith_descriptor_values%5D%5B1259%5D=&search%5Bwith_descriptor_values%5D%5B11805%5D=&search%5Bwith_descriptor_values%5D%5B11806%5D=&search%5Bwith_descriptor_values%5D%5B11832%5D=&search%5Bwith_descriptor_values%5D%5B11833%5D=&search%5Bvariants_with_identifier%5D%5B14%5D%5B%5D=&search%5Bvariants_with_identifier%5D%5B15%5D%5B%5D=&search%5Bsort%5D=sell_price&search%5Bdirection%5D=ascend&commit=Search&search%5Bcatalog_group_id_eq%5D='
         return url
 
-    def compareCardNames(self, cardName, cardName2):
-        """
-        compares two card names and returns true if they are the same
-        """
-        # remove all punctuation from card names
-        cardName = cardName.translate(str.maketrans('', '', string.punctuation)).lower()
-        cardName2 = cardName2.translate(str.maketrans('', '', string.punctuation)).lower()
-        if cardName in cardName2:
-            return True
-        else:
-            return False
-        
+    def scrapeCheapest(self):
+        page=requests.get(self.url)
+        sp=BeautifulSoup(page.text,'html.parser')
+        cards=sp.select('li.product div.inner')
+        try:
+            cheapestCard=cards[0]
+            name = cheapestCard.select_one('div.image-meta div.image a')['title']
+            link = self.baseUrl + cheapestCard.select_one('div.image-meta div.image a')['href']
+            imageUrl = cheapestCard.select_one('div.image-meta div.image a img')['src']
+            setName = cheapestCard.select_one('div.image-meta div.meta span.category').getText()
+
+            condition = cheapestCard.select_one('span.variant-description').getText()
+            if "NM" in condition:
+                condition="NM"
+            elif "Light" in condition:
+                condition="LP"
+            elif "Moderate" in condition:
+                condition="MP"
+            elif "Heavy" in condition:
+                condition="HP"
+
+            price = float(cheapestCard.select_one('form.add-to-cart-form')['data-price'].replace('CAD$ ', ''))
+            
+            results = {
+                'name': name,
+                'link': link,
+                'image': imageUrl,
+                'set': setName,
+                'stock': [(condition,price)],
+                'website': 'fusion'
+
+            }
+            self.results = results
+        except:
+            pass
+
 
     def scrape(self):
         page = requests.get(self.url)
@@ -50,18 +74,12 @@ class FusionScraper():
 
             # Verify card name is correct
             try:
-                checkName = card.select_one('div.image-meta div.image a')['title']
+                name = card.select_one('div.image-meta div.image a')['title']
             except:
                 continue
-            if not self.compareCardNames(self.cardName, checkName):
+            if not self.compareCardNames(self.cardName, name):
                 continue
 
-            # Each condition has it's own product entry on fusion
-            # So just get the info for this condition of card
-
-
-
-            name = checkName
             link = self.baseUrl + card.select_one('div.image-meta div.image a')['href']
             imageUrl = card.select_one('div.image-meta div.image a img')['src']
             setName = card.select_one('div.image-meta div.meta span.category').getText()

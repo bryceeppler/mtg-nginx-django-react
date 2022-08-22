@@ -31,7 +31,6 @@ class HouseOfCardsList(APIView):
         houseOfCardsResults = houseOfCardsScraper.getResults()
         return Response(houseOfCardsResults)
 
-
 class KanatacgList(APIView):
     def get(self, request):
         """
@@ -41,6 +40,7 @@ class KanatacgList(APIView):
         kanatacgScraper = KanatacgScraper(name)
         kanatacgScraper.scrape()
         kanatacgResults = kanatacgScraper.getResults()
+        return Response(kanatacgResults)
 
 class FusionList(APIView):
     def get(self, request):
@@ -51,7 +51,7 @@ class FusionList(APIView):
         fusionScraper = FusionScraper(name)
         fusionScraper.scrape()
         fusionResults = fusionScraper.getResults()
-
+        return Response(fusionResults)
 
 class Four01List(APIView):
     def get(self, request):
@@ -72,8 +72,10 @@ class GauntletCheapest(APIView):
         Return the cheapest listing for a given card name
         """
         name = request.GET.get('name')
-
-        pass
+        gauntletScraper = GauntletScraper(name)
+        gauntletScraper.scrapeCheapest()
+        gauntletResults = gauntletScraper.getResults()
+        return Response(gauntletResults)
 
 class HouseOfCardsCheapest(APIView):
     def get(self, request):
@@ -81,8 +83,10 @@ class HouseOfCardsCheapest(APIView):
         Return the cheapest listing for a given card name
         """
         name = request.GET.get('name')
-
-        pass
+        houseOfCardsScraper = HouseOfCardsScraper(name)
+        houseOfCardsScraper.scrapeCheapest()
+        houseOfCardsResults = houseOfCardsScraper.getResults()
+        return Response(houseOfCardsResults)
 
 class KanatacgCheapest(APIView):
     def get(self, request):
@@ -90,17 +94,21 @@ class KanatacgCheapest(APIView):
         Return the cheapest listing for a given card name
         """
         name = request.GET.get('name')
-
-        pass
-
+        kanatacgScraper = KanatacgScraper(name)
+        kanatacgScraper.scrapeCheapest()
+        kanatacgResults = kanatacgScraper.getResults()
+        return Response(kanatacgResults)
+        
 class FusionCheapest(APIView):
     def get(self, request):
         """
         Return the cheapest listing for a given card name
         """
         name = request.GET.get('name')
-
-        pass
+        fusionScraper = FusionScraper(name)
+        fusionScraper.scrapeCheapest()
+        fusionResults = fusionScraper.getResults()
+        return Response(fusionResults)
 
 class Four01Cheapest(APIView):
     def get(self, request):
@@ -108,5 +116,7 @@ class Four01Cheapest(APIView):
         Return the cheapest listing for a given card name
         """
         name = request.GET.get('name')
-
-        pass
+        four01Scraper = Four01Scraper(name)
+        four01Scraper.scrapeCheapest()
+        four01Results = four01Scraper.getResults()
+        return Response(four01Results)

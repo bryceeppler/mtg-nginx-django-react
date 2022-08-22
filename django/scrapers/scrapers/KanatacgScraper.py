@@ -2,16 +2,14 @@ from bs4 import BeautifulSoup
 import requests
 import string
 
-class KanatacgScraper():
+from .Scraper import Scraper
+
+class KanatacgScraper(Scraper):
     def __init__(self, cardName):
-        self.cardName = cardName
-        self.results = {}
+        Scraper.__init__(self, cardName)
         self.baseUrl = 'https://www.kanatacg.com'
         self.searchUrl = self.baseUrl + '/products/search?query='
         self.url = self.createUrl()
-
-    def getResults(self):
-        return self.results
 
     def createUrl(self):
         url = self.searchUrl
@@ -24,17 +22,6 @@ class KanatacgScraper():
         return url
 
 
-    def compareCardNames(self, cardName, cardName2):
-        """
-        compares two card names and returns true if they are the same
-        """
-        # remove all punctuation from card names
-        cardName = cardName.translate(str.maketrans('', '', string.punctuation)).lower()
-        cardName2 = cardName2.translate(str.maketrans('', '', string.punctuation)).lower()
-        if cardName in cardName2:
-            return True
-        else:
-            return False
 
 
     def scrape(self):
