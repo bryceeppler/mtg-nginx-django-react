@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import string
+from .Scraper import Scraper
+
 
 
 class FusionScraper():

@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import string
 import json
+from .Scraper import Scraper
 
 # This is scraped using an API requests that returns the stock in json
 # is nice
