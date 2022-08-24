@@ -36,10 +36,8 @@ class HouseOfCardsScraper():
             return False
 
     def scrape(self):
-        print('Scraping ' + self.baseUrl)
         page = requests.get(self.url)
 
-        print("Retreiving card list")
         sp = BeautifulSoup(page.text, 'html.parser')
         cards = sp.select('div.productCard__card')
 

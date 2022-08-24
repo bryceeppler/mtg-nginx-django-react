@@ -1,5 +1,5 @@
 import React from "react";
-import { DataGrid, GridToolbar, GridToolbarContainer, GridToolbarColumnsButton } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar, GridToolbarContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridToolbarDensitySelector } from "@mui/x-data-grid";
 import { Button, Container } from "@mui/material";
 import { useState } from "react";
 
@@ -36,6 +36,8 @@ function CustomToolbar() {
   return (
     <GridToolbarContainer>
       <GridToolbarColumnsButton />
+      <GridToolbarFilterButton />
+      <GridToolbarDensitySelector />
     </GridToolbarContainer>
   );
 }
@@ -48,15 +50,14 @@ const columns = [
     renderCell: (params) => {
       return <img src={params.row.image} height={90} />;
     },
-    flex: 1,
     align: "center",
     headerAlign: "center",
 
   },
-  { field: "name", headerName: "Name", width: 200, align: "center", headerAlign: 'center' },
-  { field: "set", headerName: "Set", width: 180, align: "center", headerAlign: 'center' },
+  { field: "name", headerName: "Name", flex: 1, align: "center", headerAlign: 'center' },
+  { field: "set", headerName: "Set", flex:1, align: "center", headerAlign: 'center' },
   { field: "price", headerName: "Price", width: 70, align: "center", headerAlign: 'center', },
-  { field: "condition", headerName: "Condition", align: "center", headerAlign: 'center' },
+  { field: "condition", headerName: "Condition", width: 90, align: "center", headerAlign: 'center' },
   {
     field: "websiteLogo",
     headerName: "Vendor",

@@ -11,6 +11,9 @@ WORKDIR /django
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
+EXPOSE 8000
 
 # copy code
 COPY . .
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi"]

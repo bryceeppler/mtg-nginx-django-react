@@ -38,10 +38,8 @@ class FusionScraper():
         
 
     def scrape(self):
-        print('Scraping ' + self.baseUrl)
         page = requests.get(self.url)
  
-        print('Retreiving card list')
         sp = BeautifulSoup(page.text, 'html.parser')
         cards = sp.select('li.product div.inner')
         stockList = []
@@ -55,7 +53,6 @@ class FusionScraper():
                 checkName = card.select_one('div.image-meta div.image a')['title']
             except:
                 continue
-            print(checkName)
             if not self.compareCardNames(self.cardName, checkName):
                 continue
 

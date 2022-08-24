@@ -10,9 +10,12 @@ import {
 } from "@mui/material";
 import HelpCenterTwoToneIcon from "@mui/icons-material/HelpCenterTwoTone";
 import { Box } from "@mui/system";
+import { Link } from "react-router-dom";
+import Container from "@mui/material/Container";
 
-axios.defaults.baseURL = "http://54.225.140.11/api/";
-// axios.defaults.baseURL = "http://localhost:8000/api/";
+
+// axios.defaults.baseURL = "http://54.225.140.11/api/";
+axios.defaults.baseURL = "http://localhost:8000/api/";
 
 
 
@@ -82,9 +85,21 @@ export default function CardDisplay() {
             setCardName={setCardName}
             cardName={cardName}
           />
-        </Paper>
+          <Container 
+            sx={{
+              paddingTop: 2,
+            }}
+          >
+                      <Link to="bulk"><Typography sx={{
+                        textDecoration: "underline",
+                        color: "#70BDF9"
+                    }} >Search for multiple cards</Typography></Link>
 
-        <div style={{ height: 400, width: "100%", maxWidth: "900px" }}>
+          </Container>
+                    
+
+        </Paper>
+        <div style={{ height: 400, width: "100%", maxWidth: "1200px" }}>
           <div style={{ display: "flex", height: "100%" }}>
             <div style={{ flexGrow: 1 }}>
               {loading ? <p>Loading...</p> : data && <CardTable data={data} />}

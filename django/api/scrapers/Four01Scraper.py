@@ -59,6 +59,9 @@ class Four01Scraper():
             image = item['t']
             url = self.siteUrl + item['u']
 
+            if not self.compareCardNames(self.cardName, name):
+                continue 
+            
             stock = []
             for stockItem in item['vra']:
                 item = stockItem[1]
@@ -106,13 +109,5 @@ class Four01Scraper():
             })
 
         self.results = cardList
-
-# if __name__ == '__main__':
-#     name = "counterspell"
-
-#     four01Scraper = Four01Scraper(name)
-#     four01Scraper.scrape()
-#     results = four01Scraper.getResults()
-#     print('done')
 
 
