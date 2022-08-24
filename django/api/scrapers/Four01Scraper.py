@@ -7,10 +7,9 @@ from .Scraper import Scraper
 # This is scraped using an API requests that returns the stock in json
 # is nice
 
-class Four01Scraper():
+class Four01Scraper(Scraper):
     def __init__(self, cardName):
-        self.cardName = cardName
-        self.results = []
+        Scraper.__init__(self, cardName)
         self.siteUrl = 'https://store.401games.ca'
         self.baseUrl = 'https://ultimate-dot-acp-magento.appspot.com/full_text_search?request_source=v-next&src=v-next&UUID=d3cae9c0-9d9b-4fe3-ad81-873270df14b5&uuid=d3cae9c0-9d9b-4fe3-ad81-873270df14b5&store_id=17041809&cdn_cache_key=1661088450&api_type=json&facets_required=1&products_per_page=20&narrow=[[%22In+Stock%22,%22True%22],[%22Category%22,%22Magic:+The+Gathering+Singles%22]]&q='
         self.url = self.createUrl()
