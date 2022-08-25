@@ -1,19 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
-import string
 from .Scraper import Scraper
 
 
-class HouseOfCardsScraper():
+class HouseOfCardsScraper(Scraper):
     def __init__(self, cardName):
-        self.cardName = cardName
-        self.results = {}
+        Scraper.__init__(self, cardName)
         self.baseUrl = 'https://houseofcards.ca'
         self.searchUrl = self.baseUrl + '/search?page=1&q=%2A'
         self.url = self.createUrl()
-
-    def getResults(self):
-        return self.results
+        self.website='houseOfCards'
 
     def createUrl(self):
         url = self.searchUrl
@@ -24,18 +20,6 @@ class HouseOfCardsScraper():
                 url+= '%20' 
             else: url+= '%2A'
         return url
-
-    def compareCardNames(self, cardName, cardName2):
-        """
-        compares two card names and returns true if they are the same
-        """
-        # remove all punctuation from card names
-        cardName = cardName.translate(str.maketrans('', '', string.punctuation)).lower()
-        cardName2 = cardName2.translate(str.maketrans('', '', string.punctuation)).lower()
-        if cardName in cardName2:
-            return True
-        else:
-            return False
 
     def scrape(self):
         page = requests.get(self.url)
@@ -92,7 +76,8 @@ class HouseOfCardsScraper():
                 'link': link,
                 'image': imageUrl,
                 'set': setName,
-                'stock': variantStockList
+                'stock': variantStockList,
+                'website': self.website
             }
 
             stockList.append(results)

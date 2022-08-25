@@ -21,16 +21,18 @@ export default function Bulk() {
   const [data, setData] = useState(null);
   return (
     <div>
-      <Container width="100%" height="100%" display="flex" sx={{ padding: 2 }}>
+      <Container width="100%" height="100%" sx={{ padding: 2 }}>
         <Paper
+        
           maxWidth="1200px"
           sx={{
             padding: 2,
           }}
         >
-          <HomeLink/>
-          {!data && <BulkSearch data={data} setData={setData}/>}
-          {data && <BulkResults data={data} setData={setData}/>}
+
+          <HomeLink />
+          {!data && <BulkSearch data={data} setData={setData} />}
+          {data && <BulkResults data={data} setData={setData} />}
         </Paper>
       </Container>
     </div>

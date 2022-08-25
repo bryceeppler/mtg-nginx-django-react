@@ -88,6 +88,13 @@ const columns = [
     headerAlign: "center",
   },
   {
+    field: "website",
+    headerName: "Website",
+    width: 90,
+    align: "center",
+    headerAlign: "center",
+  },
+  {
     field: "websiteLogo",
     headerName: "Vendor",
     width: 110,
@@ -99,7 +106,7 @@ const columns = [
   },
 
   {
-    field: "buynow  ",
+    field: "buynow",
     headerName: "Buy Now",
     renderCell: (params) => {
       return renderBuyNowBtn(params.row);
@@ -124,8 +131,8 @@ export default function BulkTable({ data }) {
   const rows = [];
   //   PROCESS DATA ROWS FOR TABLE
   try {
-    for (const card of data["results"]) {
-      const websiteLogo = null;
+    for (const card of data) {
+      let websiteLogo = null;
       if (card["website"] === "gauntlet") {
         websiteLogo = gauntletImage;
       } else if (card["website"] === "houseOfCards") {

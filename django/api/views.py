@@ -1,14 +1,21 @@
-from rest_framework.views import APIView
+from .scrapers.singleScrapers.GauntletScraper import GauntletScraper
+from .scrapers.singleScrapers.HouseOfCardsScraper import HouseOfCardsScraper
+from .scrapers.singleScrapers.KanatacgScraper import KanatacgScraper
+from .scrapers.singleScrapers.FusionScraper import FusionScraper
+from .scrapers.singleScrapers.Four01Scraper import Four01Scraper
 from rest_framework.response import Response
-from .scrapers.GauntletScraper import GauntletScraper
-from .scrapers.HouseOfCardsScraper import HouseOfCardsScraper
-from .scrapers.KanatacgScraper import KanatacgScraper
-from .scrapers.FusionScraper import FusionScraper
-from .scrapers.Four01Scraper import Four01Scraper
+from rest_framework.views import APIView
+from rest_framework import status
+import concurrent.futures
 import json
 import re
-import concurrent.futures
 
+
+
+# Create your views here.
+class ping(APIView):
+    def get(self, request):
+        return Response(status=status.HTTP_200_OK)
 
 class getPrice(APIView):
     results = []
@@ -19,10 +26,12 @@ class getPrice(APIView):
         return
 
     def get(self, request):
+        """
+        Given the name of a card as a query paramater,
+        get the price of a card across all stores.
+        """
         # get "name" parameter from request
         name = request.GET.get('name')
-
-        print("Request received with cardName " + name)
 
         houseOfCardsScraper = HouseOfCardsScraper(name)
         gauntletScraper = GauntletScraper(name)
@@ -40,148 +49,106 @@ class getPrice(APIView):
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
             results = executor.map(self.transform, scrapers)
-            print(results)
 
-        return Response(self.results)
-
-
-class getPriceBulk(APIView):
-
-    def post(self, request):
-        # get "name" parameter from request
-        body = json.loads(request.body.decode('utf-8'))
-        # data = body['data']
-        data = {
-            "status": "2 / 2 cards found",
-            "results": [
-                {
-                    "name": "Dockside Extortionist",
-                    "link": "https://www.gauntletgamesvictoria.ca/catalog/magic_singles-special_editions-commander_2019/dockside_extortionist/1583304",
-                    "image": "https://crystal-cdn4.crystalcommerce.com/photos/6522815/medium/en_2UKUpFPSWV.png",
-                    "set": "Commander 2019",
-                    "stock": [
-                        [
-                            "NM",
-                            66.23
-                        ]
-                    ],
-                    "website": "gauntlet"
-                },
-                {
-                    "name": "Counterspell  (EMA)",
-                    "set": "Eternal Masters",
-                    "image": "https://cdn.shopify.com/s/files/1/1704/1809/products/0c9a7cb0-5bff-48ff-b620-2838816ac9b5_large.jpg?v=1659653119",
-                    "link": "https://store.401games.ca/products/02dcd191-aecf-11e7-f130-65b641d00211",
-                    "stock": [
-                        [
-                            "NM",
-                            2.0
-                        ]
-                    ],
-                    "website": "four01"
-                }
-            ]
-        }
-
+        data = self.results.copy()
+        self.results.clear()
         return Response(data)
 
-        # returnList = []
+class getBulkPrice(APIView):
+    worstCondition = 3
+    conditionDict = {
+        'NM': 0,
+        'LP': 1,
+        'MP': 2,
+        'HP': 3,
+    }
+    def scraperThread(self, scraper):
+        """
+        Returns the cheapest price of a card from a single store.
+        """
+        scraper.scrape()
+        cardList = scraper.getResults() # a list of card objects
+        # get the cheapest card from the list
+        cheapestPrice = 100000
+        cheapestCard = None
+        for card in cardList:
+            # check if it has the cheapest condition in stock
+            for condition in card['stock']:
+                if "Default" in condition[0]:
+                    print('bugged website' + card['website'])
+                    print('condition should not be '+condition[0])
+                    print('card link is '+card['link'])
+                if condition[0] not in self.conditionDict.keys():
+                    continue
+                if self.conditionDict[condition[0]] <= self.worstCondition:
+                    if condition[1] < cheapestPrice:
+                        cheapestPrice = condition[1]
+                        cheapestCard = card
 
-        # numCards = len(data['cards'])
-        # for card in data['cards']:
-        #     card = re.sub('[0-9]', '', card).lstrip()
-        #     cardStockList = []
-        #     cheapestPrice = 999
-        #     cheapestCard = None
+        return  cheapestCard
 
-        #     if data['gauntlet']:
-        #         gauntletScraper = GauntletScraper(card)
-        #         gauntletScraper.scrape()
-        #         gauntletResults = gauntletScraper.getResults()
-        #         if gauntletResults:
-        #             for cardInfo in gauntletResults:
-        #                 if 'Art Card' in cardInfo['name']:
-        #                     continue
-        #                 for condition, price in cardInfo['stock']:
-        #                     if price < cheapestPrice:
-        #                         cheapestPrice = price
-        #                         cheapestCard = cardInfo
-        #                 cardInfo['website'] = 'gauntlet'
-        #                 cardStockList.append(cardInfo)
-        #     if data['kanatacg']:
-        #         kanatacgScraper = KanatacgScraper(card)
-        #         kanatacgScraper.scrape()
-        #         kanatacgResults = kanatacgScraper.getResults()
-        #         if kanatacgResults:
-        #             for cardInfo in kanatacgResults:
-        #                 if 'Art Card' in cardInfo['name']:
-        #                     continue
-        #                 for condition, price in cardInfo['stock']:
-        #                     if price < cheapestPrice:
-        #                         cheapestPrice = price
-        #                         cheapestCard = cardInfo
-        #                 cardInfo['website'] = 'kanatacg'
-        #                 cardStockList.append(cardInfo)
-        #     if data['fusion']:
-        #         fusionScraper = FusionScraper(card)
-        #         fusionScraper.scrape()
-        #         fusionResults = fusionScraper.getResults()
-        #         if fusionResults:
-        #             for cardInfo in fusionResults:
-        #                 if 'Art Card' in cardInfo['name']:
-        #                     continue
-        #                 for condition, price in cardInfo['stock']:
-        #                     if price < cheapestPrice:
-        #                         cheapestPrice = price
-        #                         cheapestCard = cardInfo
-        #                 cardInfo['website'] = 'fusion'
-        #                 cardStockList.append(cardInfo)
-        #     if data['four01']:
-        #         four01Scraper = Four01Scraper(card)
-        #         four01Scraper.scrape()
-        #         four01Results = four01Scraper.getResults()
-        #         if four01Results:
-        #             for cardInfo in four01Results:
-        #                 for condition, price in cardInfo['stock']:
-        #                     if price < cheapestPrice:
-        #                         cheapestPrice = price
-        #                         cheapestCard = cardInfo
-        #                 cardInfo['website'] = 'four01'
-        #                 cardStockList.append(cardInfo)
-        #     if data['houseOfCards']:
-        #         houseOfCardsScraper = HouseOfCardsScraper(card)
-        #         houseOfCardsScraper.scrape()
-        #         houseOfCardsResults = houseOfCardsScraper.getResults()
-        #         if houseOfCardsResults:
-        #             for cardInfo in houseOfCardsResults:
-        #                 if 'Art Card' in cardInfo['name']:
-        #                     continue
-        #                 for condition, price in cardInfo['stock']:
-        #                     if price < cheapestPrice:
-        #                         cheapestPrice = price
-        #                         cheapestCard = cardInfo
-        #                     else:
-        #                         continue
+    def cardThread(self, cardName):
+        """
+        Returns the cheapest price of a card across all stores.
+        """
+        # create scrapers
+        scrapers = []
+        if 'gauntlet' in self.websites:
+            scrapers.append(GauntletScraper(cardName))
+        if 'houseoOfCards' in self.websites:
+            scrapers.append(HouseOfCardsScraper(cardName))
+        if 'kanatacg' in self.websites:
+            scrapers.append(KanatacgScraper(cardName))
+        if 'fusion' in self.websites:
+            scrapers.append(FusionScraper(cardName))
+        if 'four01' in self.websites:
+            scrapers.append(Four01Scraper(cardName))
 
-        #                 cardInfo['website'] = 'houseOfCards'
-        #                 cardStockList.append(cardInfo)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+            results = executor.map(self.scraperThread, scrapers)
+            # results now has the cheapest price from each store
 
-        #     for card in cardStockList:
-        #         if ('Art Card' in card['name']):
-        #             continue
-        #         for stock in card['stock']:
-        #             price = stock[1]
-        #             if price < cheapestPrice:
-        #                 cheapestPrice = price
-        #                 cheapestCard = card
-        #                 cheapestCard['stock'] = stock
+        # filter through results to find the cheapest card
+        cheapestPrice = 100000
+        cheapestCard = None
+    
+        for card in results:
+            try:
+                name = card['name']
+                stock = card['stock']
+                if "Art Card" in name:
+                    continue
+                elif "Art Series" in name:
+                    continue
+            except:
+                continue
 
-        #     returnList.append(cheapestCard)
+            for condition in stock:
+                conditionCode = condition[0]
+                if conditionCode not in self.conditionDict.keys():
+                    continue
+                if self.conditionDict[condition[0]] <= self.worstCondition:
+                    if condition[1] < cheapestPrice:
+                        cheapestPrice = condition[1]
+                        cheapestCard = card
 
-        # numCardsFound = len(returnList)
+        return cheapestCard
 
-        # results = {
-        #     "status": str(numCardsFound) + " / " + str(numCards) + " cards found",
-        #     'results': returnList
-        # }
-        # return Response(results)
+    
+    def post(self, request):
+        body = json.loads(request.body.decode('utf-8'))
+        self.websites = body['websites']
+        cardNameList = [re.sub(r'^\d+\s', '', cardName) for cardName in body['cardNames']]
+        
+        # worst acceptable condition as an int
+        try:
+            self.worstCondition = self.conditionDict[body['condition']]
+        except:
+            self.worstCondition = 4
+
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+            results = executor.map(self.cardThread, cardNameList, timeout=20)
+
+        cheapestCards = list(results)
+        return Response(cheapestCards, status=status.HTTP_200_OK)

@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import string
 import json
 from .Scraper import Scraper
 
@@ -13,9 +12,7 @@ class Four01Scraper(Scraper):
         self.siteUrl = 'https://store.401games.ca'
         self.baseUrl = 'https://ultimate-dot-acp-magento.appspot.com/full_text_search?request_source=v-next&src=v-next&UUID=d3cae9c0-9d9b-4fe3-ad81-873270df14b5&uuid=d3cae9c0-9d9b-4fe3-ad81-873270df14b5&store_id=17041809&cdn_cache_key=1661088450&api_type=json&facets_required=1&products_per_page=20&narrow=[[%22In+Stock%22,%22True%22],[%22Category%22,%22Magic:+The+Gathering+Singles%22]]&q='
         self.url = self.createUrl()
-
-    def getResults(self):
-        return self.results
+        self.website = 'four01'
 
     def createUrl(self):
         url = self.baseUrl
@@ -26,21 +23,6 @@ class Four01Scraper(Scraper):
                 url+= '+' 
         url += '&page_num=1&sort_by=relevency&with_product_attributes=true'
         return url
-
-    def compareCardNames(self, cardName, cardName2):
-        """
-        compares two card names and returns true if they are the same
-        """
-        # remove all punctuation from card names
-        cardName = cardName.translate(str.maketrans('', '', string.punctuation)).lower()
-        cardName2 = cardName2.translate(str.maketrans('', '', string.punctuation)).lower()
-        if cardName in cardName2:
-            return True
-        else:
-            return False
-        
-
-
 
     def scrape(self):
         # make the api request
@@ -70,14 +52,21 @@ class Four01Scraper(Scraper):
                 
                 if item[0][0] == 'Condition':
                     condition = item[0][1][0]
+
                     if "NM" in condition:
                         condition="NM"
                     elif "SP" in condition:
                         condition="LP"
                     elif "MP" in condition:
                         condition="MP"
-                    elif "Heavy" in condition:
+                    elif "HP" in condition:
                         condition="HP" 
+                    elif "DMG" in condition:
+                        condition="HP"
+                    elif "Damaged" in condition:
+                        condition="HP"
+                    elif "Default" in condition:
+                        condition="NM"
 
                     price = float(item[1][1][0].replace("CAD:" , ""))
                     stock.append((condition,price))
@@ -91,8 +80,14 @@ class Four01Scraper(Scraper):
                             condition="LP"
                         elif "MP" in condition:
                             condition="MP"
-                        elif "Heavy" in condition:
+                        elif "HP" in condition:
                             condition="HP" 
+                        elif "DMG" in condition:
+                            condition="HP"
+                        elif "Damaged" in condition:
+                            condition="HP"
+                        elif "Default" in condition:
+                            condition="NM"
 
                         price = float(item[0][1][0].replace("CAD:" , ""))
                         stock.append((condition,price))
@@ -105,7 +100,8 @@ class Four01Scraper(Scraper):
                 'set': set,
                 'image': image,
                 'link': url,
-                'stock': stock
+                'stock': stock,
+                'website': self.website
             })
 
         self.results = cardList

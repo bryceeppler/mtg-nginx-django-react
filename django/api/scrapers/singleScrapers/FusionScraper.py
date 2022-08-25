@@ -1,20 +1,14 @@
 from bs4 import BeautifulSoup
 import requests
-import string
 from .Scraper import Scraper
 
-
-
-class FusionScraper():
+class FusionScraper(Scraper):
     def __init__(self, cardName):
-        self.cardName = cardName
-        self.results = []
+        Scraper.__init__(self, cardName)
         self.baseUrl = 'https://www.fusiongamingonline.com'
         self.searchUrl = self.baseUrl + "/advanced_search?utf8=%E2%9C%93&search%5Bfuzzy_search%5D="
         self.url = self.createUrl()
-
-    def getResults(self):
-        return self.results
+        self.website = 'fusion'
 
     def createUrl(self):
         url = self.searchUrl
@@ -25,19 +19,6 @@ class FusionScraper():
                 url+= '+' 
         url += '&search%5Btags_name_eq%5D=&search%5Bsell_price_gte%5D=&search%5Bsell_price_lte%5D=&search%5Bbuy_price_gte%5D=&search%5Bbuy_price_lte%5D=&search%5Bin_stock%5D=0&search%5Bin_stock%5D=1&buylist_mode=0&search%5Bcategory_ids_with_descendants%5D%5B%5D=&search%5Bcategory_ids_with_descendants%5D%5B%5D=8&search%5Bwith_descriptor_values%5D%5B6%5D=&search%5Bwith_descriptor_values%5D%5B7%5D=&search%5Bwith_descriptor_values%5D%5B9%5D=&search%5Bwith_descriptor_values%5D%5B10%5D=&search%5Bwith_descriptor_values%5D%5B11%5D=&search%5Bwith_descriptor_values%5D%5B13%5D=&search%5Bwith_descriptor_values%5D%5B348%5D=&search%5Bwith_descriptor_values%5D%5B361%5D=&search%5Bwith_descriptor_values%5D%5B1259%5D=&search%5Bwith_descriptor_values%5D%5B11805%5D=&search%5Bwith_descriptor_values%5D%5B11806%5D=&search%5Bwith_descriptor_values%5D%5B11832%5D=&search%5Bwith_descriptor_values%5D%5B11833%5D=&search%5Bvariants_with_identifier%5D%5B14%5D%5B%5D=&search%5Bvariants_with_identifier%5D%5B15%5D%5B%5D=&search%5Bsort%5D=name&search%5Bdirection%5D=ascend&commit=Search&search%5Bcatalog_group_id_eq%5D='
         return url
-
-    def compareCardNames(self, cardName, cardName2):
-        """
-        compares two card names and returns true if they are the same
-        """
-        # remove all punctuation from card names
-        cardName = cardName.translate(str.maketrans('', '', string.punctuation)).lower()
-        cardName2 = cardName2.translate(str.maketrans('', '', string.punctuation)).lower()
-        if cardName in cardName2:
-            return True
-        else:
-            return False
-        
 
     def scrape(self):
         page = requests.get(self.url)
@@ -77,6 +58,8 @@ class FusionScraper():
                 condition="MP"
             elif "Heavy" in condition:
                 condition="HP"
+            elif "Damaged" in condition:
+                condition="HP"
 
             price = float(card.select_one('form.add-to-cart-form')['data-price'].replace('CAD$ ', ''))
             added = False
@@ -99,7 +82,8 @@ class FusionScraper():
                     'link': link,
                     'image': imageUrl,
                     'set': setName,
-                    'stock': [(condition,price)]
+                    'stock': [(condition,price)],
+                    'website': self.website
                 }
 
             stockList.append(results)

@@ -3,18 +3,14 @@ import { DataGrid, GridToolbar, GridToolbarContainer, GridToolbarColumnsButton, 
 import { Button, Container } from "@mui/material";
 import { useState } from "react";
 
-const gauntletImage =
-  "http://cc-client-assets.s3.amazonaws.com/store/gauntletgamesvictoria/7c8176e703db451bad3277bb6d4b8631/medium/Transparent_logo.png";
-const hocImage =
-  "https://i.ibb.co/JdGh6x9/Screen-Shot-2022-08-09-at-1-43-13-PM-removebg-preview.png";
-const wtImage =
-  "https://i.ibb.co/hm3qKWc/wizardstower-removebg-preview.png";
+const websiteLogos = {
+  "gauntlet" :  "http://cc-client-assets.s3.amazonaws.com/store/gauntletgamesvictoria/7c8176e703db451bad3277bb6d4b8631/medium/Transparent_logo.png",
+  "houseOfCards" : "https://cdn.shopify.com/s/files/1/0567/4178/9882/files/Logo-02-03_x400@2x.jpg?v=1623635144",
+  "kanatacg" :  "https://i.ibb.co/hm3qKWc/wizardstower-removebg-preview.png",
+  "fusion" : "https://cc-client-assets.s3.amazonaws.com/store/fusiongamingonline/e85497a0877911e79bd1b58786c09dea/large/fusiongamingonline_logo2.png",
+  "four01" : "https://cdn.shopify.com/s/files/1/1704/1809/files/Logo_For_Website_260x_b5b9ece0-d6a5-4807-9427-0d488c650cb7_320x.png?v=1582044237"
+}
 
-const fusionImage = 
-  "https://cc-client-assets.s3.amazonaws.com/store/fusiongamingonline/e85497a0877911e79bd1b58786c09dea/large/fusiongamingonline_logo2.png";
-
-const four01Image =
-  'https://cdn.shopify.com/s/files/1/1704/1809/files/Logo_For_Website_260x_b5b9ece0-d6a5-4807-9427-0d488c650cb7_320x.png?v=1582044237';
 
 const renderBuyNowBtn = (params) => {
   return (
@@ -94,33 +90,18 @@ export default function CardTable({ data }) {
 
 
   const rows = [];
-  for (const website in data) {
-    var websiteLogo;
-    if (website === "gauntlet") {
-      websiteLogo = gauntletImage;
-    } else if (website === "houseOfCards") {
-      websiteLogo = hocImage;
-    } else if (website === "kanatacg") {
-      websiteLogo = wtImage;
-    } else if (website === "fusion") {
-      websiteLogo = fusionImage;
-    } else if (website === 'four01') {
-      websiteLogo = four01Image;
-    }
-
-    for (const card of data[website]) {
+for (const siteCardList of data){
+    for (const card of siteCardList) {
       for (const condition of card.stock) {
-        if (website === 'fusion') {
-          console.log('card found on fusion', card)
-        };
+        console.log(websiteLogos[card.website])
         rows.push({
           name: card.name,
           set: card.set,
           image: card.image,
           link: card.link,
           price: condition[1],
-          website: website,
-          websiteLogo: websiteLogo,
+          website: card.website,
+          websiteLogo: websiteLogos[card.website],
           condition: condition[0],
         });
       }

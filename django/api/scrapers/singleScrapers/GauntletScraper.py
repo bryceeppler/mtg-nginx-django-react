@@ -1,19 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
-import string
 from .Scraper import Scraper
 
 
-class GauntletScraper():
+class GauntletScraper(Scraper):
     def __init__(self, cardName):
-        self.cardName = cardName
-        self.results = []
+        Scraper.__init__(self, cardName)
         self.baseUrl = 'https://www.gauntletgamesvictoria.ca'
         self.searchUrl = self.baseUrl + '/products/search?q='
         self.url = self.createUrl()
-
-    def getResults(self):
-        return self.results
+        self.website = 'gauntlet'
 
     def createUrl(self):
         url = self.searchUrl
@@ -24,19 +20,6 @@ class GauntletScraper():
                 url+= '+' 
             else: url+= '&c1'
         return url
-
-    def compareCardNames(self, cardName, cardName2):
-        """
-        compares two card names and returns true if they are the same
-        """
-        # remove all punctuation from card names
-        cardName = cardName.translate(str.maketrans('', '', string.punctuation)).lower()
-        cardName2 = cardName2.translate(str.maketrans('', '', string.punctuation)).lower()
-        if cardName in cardName2:
-            return True
-        else:
-            return False
-        
 
     def scrape(self):
         page = requests.get(self.url)
@@ -64,13 +47,16 @@ class GauntletScraper():
                 if 'no-stock' in c['class']:
                     continue
                 condition = c.select_one('span.variant-description').getText()
-                if "NM" in condition:
+            
+                if "NM" or "Brand New" in condition:
                     condition="NM"
                 elif "Light" in condition:
                     condition="LP"
                 elif "Moderate" in condition:
                     condition="MP"
                 elif "Heavy" in condition:
+                    condition="HP"
+                elif "Damaged" in condition:
                     condition="HP"
 
                 price = float(c.select_one('form.add-to-cart-form')['data-price'].replace('CAD$ ', ''))
@@ -92,7 +78,8 @@ class GauntletScraper():
                 'link': link,
                 'image': imageUrl,
                 'set': setName,
-                'stock': variantStockList
+                'stock': variantStockList,
+                'website': self.website
             }
             stockList.append(results)
             

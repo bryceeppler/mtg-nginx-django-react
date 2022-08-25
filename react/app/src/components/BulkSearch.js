@@ -1,5 +1,6 @@
 import {
   Button,
+  CircularProgress,
   Container,
   MenuItem,
   Paper,
@@ -33,20 +34,24 @@ export default function BulkSearch({ data, setData }) {
   };
 
   const handleClick = () => {
+    // get list of websites to search
+    let websites = [];
+    if (gauntlet) websites.push("gauntlet");
+    if (four01) websites.push("four01");
+    if (houseOfCards) websites.push("houseOfCards");
+    if (fusion) websites.push("fusion");
+    if (kanatacg) websites.push("kanatacg");
+
     console.log("Clicked");
     const cardArray = cardList.split("\n");
     setLoading(true);
     axios
       .post("/bulk/", {
-        data: {
-          cards: cardArray,
+     
+          cardNames: cardArray,
+          websites: websites,
           condition: condition,
-          gauntlet: gauntlet,
-          four01: four01,
-          houseOfCards: houseOfCards,
-          fusion: fusion,
-          kanatacg: kanatacg,
-        },
+       
       })
       .then((res) => {
         console.log("setting response data: ", res.data);
@@ -60,12 +65,17 @@ export default function BulkSearch({ data, setData }) {
   return (
     <div>
       {!loading ? (
-        <Stack direction="row" justifyContent="center">
+        <Stack 
+          direction="row" 
+          justifyContent="center"
+          spacing={2}
+        >
           <Paper
+            elevation={3}
             sx={{
               padding: 2,
               width: "30%",
-              border: "1px solid #e0e0e0",
+              // border: "1px solid #e0e0e0",
             }}
           >
             <Stack
@@ -134,10 +144,11 @@ export default function BulkSearch({ data, setData }) {
             </Stack>
           </Paper>
           <Paper
+            elevation={3}
             sx={{
               padding: 2,
               width: "70%",
-              border: "1px solid #ccc",
+              // border: "1px solid #ccc",
             }}
           >
             <Stack direction="column" spacing={2}>
@@ -167,7 +178,16 @@ export default function BulkSearch({ data, setData }) {
           </Paper>
         </Stack>
       ) : (
-        <Typography>Loading...</Typography>
+        <Container
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+        <CircularProgress/>
+        <Typography p={2}>Loading... this may take a minute</Typography>
+        </Container>
       )}
     </div>
   );
